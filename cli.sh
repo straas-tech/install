@@ -8,7 +8,7 @@
 
 set -euo pipefail
 
-REPO="straas-tech/straas-workspace"
+REPO="straas-tech/install"
 VERSION="${1:-latest}"
 INSTALL_DIR="${STRAAS_INSTALL_DIR:-}"
 
