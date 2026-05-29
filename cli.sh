@@ -96,7 +96,7 @@ chmod +x straas
 mv straas "$INSTALL_DIR/straas"
 
 # Smoke test — verify the installed binary runs
-if ! "$INSTALL_DIR/straas" --version >/dev/null 2>&1; then
+if ! "$INSTALL_DIR/straas" --help >/dev/null 2>&1; then
   echo "error: installed binary does not execute correctly" >&2
   exit 1
 fi
