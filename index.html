@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Install STRAAS CLI</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      background: #0d1117;
+      color: #e6edf3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 640px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #f0f6fc;
+    }
+
+    .tagline {
+      color: #7d8590;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .install-block {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .install-label {
+      font-size: 0.75rem;
+      color: #7d8590;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .install-cmd {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.95rem;
+      color: #79c0ff;
+      word-break: break-all;
+    }
+
+    .copy-btn {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.35rem 0.75rem;
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      color: #c9d1d9;
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .copy-btn:hover { background: #30363d; }
+
+    .details {
+      font-size: 0.85rem;
+      color: #7d8590;
+      line-height: 1.6;
+    }
+
+    .details a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .details a:hover { text-decoration: underline; }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      background: #161b22;
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>STRAAS CLI</h1>
+    <p class="tagline">AI-powered development workflows for engineering teams.</p>
+
+    <div class="install-block">
+      <div class="install-label">Install (macOS &amp; Linux)</div>
+      <div class="install-cmd" id="cmd">curl -fsSL https://install.straas.ai/cli.sh | bash</div>
+      <button class="copy-btn" onclick="copy()">Copy</button>
+    </div>
+
+    <div class="details">
+      <p>Requires: <code>curl</code>, <code>bash</code>. Installs to <code>/usr/local/bin/straas</code> (or <code>~/.local/bin/straas</code> if not writable).</p>
+      <br>
+      <p>Pin a version: <code>curl -fsSL https://install.straas.ai/cli.sh | bash -s -- v0.2.0</code></p>
+      <br>
+      <p>Custom install dir: <code>STRAAS_INSTALL_DIR=$HOME/bin curl -fsSL https://install.straas.ai/cli.sh | bash</code></p>
+      <br>
+      <p>Source: <a href="https://github.com/straas-tech/straas-workspace">github.com/straas-tech/straas-workspace</a></p>
+    </div>
+  </div>
+
+  <script>
+    function copy() {
+      const text = document.getElementById('cmd').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 1500);
+      });
+    }
+  </script>
+</body>
+</html>
