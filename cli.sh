@@ -2,9 +2,9 @@
 # STRAAS CLI installer — ADR-005 §4.1
 #
 # Usage:
-#   curl -fsSL https://install.straas.ai/cli.sh | bash
-#   curl -fsSL https://install.straas.ai/cli.sh | bash -s -- v0.2.0
-#   curl -fsSL https://install.straas.ai/cli.sh | STRAAS_INSTALL_DIR=$HOME/bin bash
+#   curl -fsSL https://straas-tech.github.io/install/cli.sh | bash
+#   curl -fsSL https://straas-tech.github.io/install/cli.sh | bash -s -- v0.2.0
+#   curl -fsSL https://straas-tech.github.io/install/cli.sh | STRAAS_INSTALL_DIR=$HOME/bin bash
 
 set -euo pipefail
 

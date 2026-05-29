@@ -1,6 +1,6 @@
 # straas-tech/install
 
-Hosts the STRAAS CLI installer at `https://install.straas.ai/cli.sh`.
+Hosts the STRAAS CLI installer at `https://straas-tech.github.io/install/cli.sh`.
 
 ## Files
 
@@ -12,19 +12,19 @@ Hosts the STRAAS CLI installer at `https://install.straas.ai/cli.sh`.
 ## Usage
 
 ```bash
-curl -fsSL https://install.straas.ai/cli.sh | bash
+curl -fsSL https://straas-tech.github.io/install/cli.sh | bash
 ```
 
 Pin a version:
 
 ```bash
-curl -fsSL https://install.straas.ai/cli.sh | bash -s -- v0.2.0
+curl -fsSL https://straas-tech.github.io/install/cli.sh | bash -s -- v0.2.0
 ```
 
 Custom install directory:
 
 ```bash
-STRAAS_INSTALL_DIR=$HOME/bin curl -fsSL https://install.straas.ai/cli.sh | bash
+STRAAS_INSTALL_DIR=$HOME/bin curl -fsSL https://straas-tech.github.io/install/cli.sh | bash
 ```
 
 ## Updating
